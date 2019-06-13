@@ -18,47 +18,47 @@ class App(Frame):
 
         p_original = PhotoImage(file="playbutton.png")
         p_small = p_original.subsample(10, 10)
-        self.playButton = Button(self.labelbg, text="PLAY", command=self.play, image=p_small).grid(column=2, row=0)
+        self.playButton = Button(self.labelbg, command=self.play, image=p_small).grid(column=2, row=0)
 
         s_original = PhotoImage(file="stop.png")
         sSmall = s_original.subsample(10, 10)
-        self.stopBtn = Button(self.labelbg, text="STOP", command=self.stop, image=sSmall).grid(column=1, row=0)
+        self.stopBtn = Button(self.labelbg, command=self.stop, image=sSmall).grid(column=1, row=0)
 
         pa_original = PhotoImage(file="pause.png")
         pa_small = pa_original.subsample(10, 10)
-        self.pauseBtn = Button(self.labelbg, text="PAUSE", command=self.pause, image=pa_small).grid(column=3, row=0)
+        self.pauseBtn = Button(self.labelbg, command=self.pause, image=pa_small).grid(column=3, row=0)
 
         vu_original = PhotoImage(file="volumeup.png")
         vu_small = vu_original.subsample(10, 10)
-        self.volumedownBtn = Button(self.labelbg, text="VOLUMEDOWN", command=self.volumeUp, image=vu_small).grid(
+        self.volumedownBtn = Button(self.labelbg, command=self.volumeUp, image=vu_small).grid(
             column=4, row=1)
         vd_original = PhotoImage(file="volumedown.png")
         vd_small = vd_original.subsample(10, 10)
-        self.volumeupBtn = Button(self.labelbg, text="VOLUMEUP", command=self.volumeDown, image=vd_small).grid(column=0,
+        self.volumeupBtn = Button(self.labelbg, command=self.volumeDown, image=vd_small).grid(column=0,
                                                                                                               row=1)
         n_Original = PhotoImage(file="nextsong.png")
         n_small = n_Original.subsample(5, 5)
-        self.nextSong = Button(self.labelbg, text="NEXT", command=self.nextSong, image=n_small).grid(column=4, row=0)
+        self.nextSong = Button(self.labelbg, command=self.nextSong, image=n_small).grid(column=4, row=0)
 
         pr_original = PhotoImage(file="presong.png")
         pr_small = pr_original.subsample(10, 10)
-        self.preSong = Button(self.labelbg, text="PREVIOUS", command=self.preSong, image=pr_small).grid(column=0, row=0)
+        self.preSong = Button(self.labelbg, command=self.preSong, image=pr_small).grid(column=0, row=0)
 
         m_original = PhotoImage(file="mixbutton.png")
         m_small = m_original.subsample(10, 10)
-        self.mix = Button(self.labelbg, text="MIX", command=self.mix, image=m_small).grid(column=1, row=1)
+        self.mix = Button(self.labelbg, command=self.mix, image=m_small).grid(column=1, row=1)
 
         re_original = PhotoImage(file="rewin.png")
         re_small = re_original.subsample(10, 10)
-        self.rewind = Button(self.labelbg, text="REWIND", command=self.rewind, image=re_small).grid(column=2, row=1)
+        self.rewind = Button(self.labelbg, command=self.rewind, image=re_small).grid(column=2, row=1)
 
         f_original = PhotoImage(file="forward button.png")
         f_small = f_original.subsample(5, 5)
-        self.forward = Button(self.labelbg, text="FORWARD", command=self.forward, image=f_small).grid(column=3, row=1)
+        self.forward = Button(self.labelbg, command=self.forward, image=f_small).grid(column=3, row=1)
 
         pl_original = PhotoImage(file="playlist.png")
         pl_small = pl_original.subsample(10, 10)
-        self.playlistopen = Button(self.labelbg, text="PLAYLIST", command=self.add_Playlist, image=pl_small).grid(
+        self.playlistopen = Button(self.labelbg, command=self.add_Playlist, image=pl_small).grid(
             column=0, row=2)
         self.v = StringVar()
         self.nowLbl = Label(self.labelbg, textvariable=self.v, relief=RAISED)
